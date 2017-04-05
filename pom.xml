@@ -8,6 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>open-door</module>
+        <module>hadoop-install</module>
     </modules>
     <packaging>pom</packaging>
 
