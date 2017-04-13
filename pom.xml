@@ -7,9 +7,12 @@
 	<artifactId>bigdata-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>open-door</module>
-        <module>hadoop-install</module>
-    </modules>
+        <module>hadoop-one</module>
+        <module>spark-demo</module>
+		<module>spark-rdd-demo</module>
+		<module>hadoop-spring-demo</module>
+		<module>hive-demo</module>
+	</modules>
     <packaging>pom</packaging>
 
 	<name>bigdata-parent</name>
