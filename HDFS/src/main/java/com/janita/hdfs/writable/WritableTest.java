@@ -1,9 +1,6 @@
 package com.janita.hdfs.writable;
 
-import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.io.Text;
-import org.apache.hadoop.io.Writable;
-import org.junit.Test;
+import org.apache.hadoop.io.*;
 
 import java.io.*;
 import java.nio.ByteBuffer;
@@ -39,6 +36,10 @@ public class WritableTest {
         while (buffer.hasRemaining() && (cp = Text.bytesToCodePoint(buffer)) != -1){
             System.out.println("******* "+Integer.toHexString(cp));
         }
+
+        BytesWritable b = new BytesWritable(new byte[]{3,5});
+        byte[] bytes = serialize(b);
+        System.out.println("*******"+ org.apache.hadoop.util.StringUtils.byteToHexString(bytes));
 
     }
 }
