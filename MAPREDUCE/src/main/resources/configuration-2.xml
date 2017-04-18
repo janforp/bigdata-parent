@@ -1,0 +1,14 @@
+<configuration>
+
+    <property>
+        <name>color</name>
+        <value>red</value>
+        <description>Color</description>
+    </property>
+
+    <property>
+        <name>weight</name>
+        <value>light</value>
+    </property>
+
+</configuration>
