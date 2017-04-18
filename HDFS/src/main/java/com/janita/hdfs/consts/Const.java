@@ -7,7 +7,9 @@ import java.io.File;
  */
 public class Const {
 
-    public static String HDFS_URI = "hdfs://192.168.128.101:9000/home/";
+    public static String HDFS_URI = "hdfs://192.168.128.101:9000/user/";
 
     public static String LOCAL_URI = "d:"+ File.separator;
+
+    public static String USER_ROOT = "root";
 }

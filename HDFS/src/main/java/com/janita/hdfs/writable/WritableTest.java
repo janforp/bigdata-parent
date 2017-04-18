@@ -1,6 +1,7 @@
 package com.janita.hdfs.writable;
 
 import org.apache.hadoop.io.*;
+import org.junit.Test;
 
 import java.io.*;
 import java.nio.ByteBuffer;
@@ -26,6 +27,34 @@ public class WritableTest {
         dataInputStream.close();
 
         return bytes;
+    }
+
+    @Test
+    public void test(){
+        ArrayWritable arrayWritable = new ArrayWritable(Text.class);
+        Text[] texts = new Text[4];
+        for (int i= 0 ;i<4;i++){
+            texts[i] = new Text(i+"");
+        }
+        arrayWritable.set(texts);
+
+        Text[] texts1 = (Text[]) arrayWritable.toArray();
+        System.out.println("*******"+texts1.toString());
+    }
+
+    @Test
+    public void testArrayPrimitive() throws IOException {
+        ArrayPrimitiveWritable arrayPrimitiveWritable = new ArrayPrimitiveWritable();
+
+        MapWritable src = new MapWritable();
+        src.put(new IntWritable(1),new Text("cat"));
+        src.put(new VIntWritable(2),new LongWritable(163));
+
+        MapWritable desc = new MapWritable();
+        WritableUtils.cloneInto(desc,src);
+
+        System.out.println("*******"+desc.get(new IntWritable(1)));
+        System.out.println("*******"+desc.get(new VIntWritable(2)));
     }
 
     public static void main(String[] args) throws IOException {

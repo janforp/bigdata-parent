@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>HDFS</artifactId>
+    <artifactId>HADOOP</artifactId>
 
     <dependencies>
         <dependency>
@@ -21,6 +21,11 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
-    </dependencies>
 
+        <dependency>
+            <groupId>com.janita.bigdata</groupId>
+            <artifactId>HDFS</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

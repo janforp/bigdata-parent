@@ -8,7 +8,9 @@
 	<version>0.0.1-SNAPSHOT</version>
     <modules>
 		<module>HDFS</module>
-	</modules>
+        <module>HADOOP</module>
+        <module>MAPREDUCE</module>
+    </modules>
     <packaging>pom</packaging>
 
 	<name>bigdata-parent</name>
